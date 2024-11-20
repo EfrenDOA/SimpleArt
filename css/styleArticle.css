@@ -1,0 +1,217 @@
+:root {
+    --peach: #ffca9e;
+    --salmon: #efae82;
+    --white: #F5F5DC;
+    --whitePost: #f9f9f9;
+    --grayPost: #efefef;
+    --box-shadow-post: 0 0 30px #0000004e;
+}
+
+body {
+    background-color: var(--whitePost);
+}
+
+main {
+    margin: 100px 40px 20px 40px;
+    display: flex;
+}
+
+/* Articulo */
+#tituloM {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    font-size: 28px;
+}
+
+#tituloLat {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.bodyArt {
+    background-color: var(--whitePost);
+    box-shadow: 0 0 30px #b3b3a14e;
+    padding: 32px;
+    border-radius: 8px;
+    width: 70%;
+}
+
+.lateral {
+    width: 30%;
+    margin-left: 1%;
+    padding: 16px;
+    padding-top: 32px;
+    background-color: var(--whitePost);
+    box-shadow: 0 0 30px #b3b3a14e;
+    border-radius: 8px;
+}
+
+/*
+.relacionados {
+    background-color: aqua;
+    width: 100%;
+    border-radius: 8px;
+}*/
+.comentarios {
+    width: 100%;
+    
+}
+
+.comentariosBox {
+    padding: 20px;
+    padding-top: 0px;
+    /*overflow-y: scroll;*/
+}
+
+.comentarioInd {
+    padding: 10px;
+    background-color: var(--grayPost);
+    margin: 10px 0px;
+}
+
+#user {
+    padding-bottom: 8px;
+}
+
+#user span {
+    color: gray;
+}
+
+
+.img1, .img2 {
+    display: flex;
+    justify-content: center;
+}
+
+#img1, #img2 {
+    width: 50%;
+}
+
+#autoria {
+    padding: 10px;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+.pasos{
+    list-style-type: decimal;
+}
+
+.container {
+    padding: 10px;
+    width: 100%;
+}
+
+.container h3 {
+    padding-bottom: 6px;
+}
+
+.container .pasos li {
+    padding-bottom: 4px;
+}
+
+/* Pie de página */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--salmon);
+    height: 40px;
+    padding: 10px;
+}
+
+.copyright {
+    color: var(--whitePost);
+    font-size: 12px;
+}
+
+
+.comentarioForm {
+    width: 100%;
+    display: flex;
+}
+
+/* El textarea va a ir aumentando de altura conforme se requiera, por eso no se muestra el scroll en él, considerar hacer esta funcionalidad con JS. Aumentaran el tamaño de form y del textarea*/
+
+
+form {
+    width: 100%;
+    display: flex;
+    height: 28px;
+    position: relative;
+}
+
+
+#comentForm textarea {
+    width: 90%;
+    height: 28px;
+    resize: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #eae9e9;;
+    font-size: 12px;
+    padding: 8px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.comentarioForm button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10%;
+    background-color: var(--peach);
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 12px;
+    height: 28px;
+}
+
+.comentarioForm button:hover {
+    background-color: var(--salmon);
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (width <= 780px) {
+    main {
+        display: block;
+    }
+    
+    .bodyArt {
+        width: 100%;
+    }
+    
+    .lateral {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    
+    .copyright {
+        font-size: 10px;
+    }
+}
+
+@media screen and (width <= 580px) {
+    #tituloM {
+        font-size: 22px;
+    }
+    
+    #tituloLat {
+        font-size: 16p
+        x;
+    }
+}

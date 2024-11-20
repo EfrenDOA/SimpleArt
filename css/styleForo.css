@@ -1,0 +1,356 @@
+:root {
+    --peach: #ffca9e;
+    --salmon: #efae82;
+    --white: #F5F5DC;
+    --whitePost: #f3f2f2;
+    --whiteComment: #f9f9f9;
+    --grayPost: #efefef;
+    --box-shadow-post: 0 0 10px  #00000022;
+}
+
+body {
+    background-color: var(--whitePost);
+}
+
+main {
+    margin: 70px 40px 20px 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#individualPost {
+    margin-top: 30px;
+    width: 900px;
+    background-color: var(--whitePost);
+    border-radius: 8px;
+    padding: 20px 40px 0px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--box-shadow-post);
+}
+
+.contentPost {
+    margin-bottom: 20px;
+    width: 820px;
+    margin: 0 auto;
+}
+
+.contentPost h2 {
+    margin-top: 0;
+    padding-bottom: 2px;
+}
+
+.autor, .fecha {
+    font-style: italic;
+}
+
+.autor {
+    padding: 4px 0px;
+}
+
+#addPost {
+    margin-top: 30px;
+    width: 900px;
+    height: 300px;
+    background-color: var(--whitePost);
+    border-radius: 8px;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--box-shadow-post);
+}
+
+.icosnInteractive {
+    border-top: solid #a8a8a8 1px;
+    margin-top: 8px;
+    padding: 8px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenedorButton {
+    justify-content: space-between;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-regular {
+    color: black;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.infoIcons {
+    background-color: var(--peach);
+    padding: 6px;
+    border-radius: 20px;
+    color: var(--white);
+}
+
+#numLikes, #numComments {
+    color: gray;
+}
+
+.informacion {
+    padding-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.infoIzq, .infoDer {
+    width: 50%;
+    font-weight: normal;
+}
+
+.infoDer {
+    text-align: right;
+}
+
+form {
+    width: 820px;
+    height: 250px;
+    padding-top: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #eae9e9;
+}
+
+textarea {
+    height: 46%;
+    overflow-y: hidden;
+    resize: none;
+}
+
+button {
+    background-color: var(--peach);
+    color: #fff;
+    padding: 6px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8PX;
+}
+
+button:hover {
+    background-color: var(--salmon);
+}
+
+.fa-regular:hover {
+    background-color: #ffca9e81;
+}
+
+
+/* Comentarios */
+
+.contentComment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1004;
+    background-color: #e9e9e9d6;
+    padding: 0px 16px;
+    
+}
+
+.contentComment.active {
+    top: 0;
+}
+
+
+.comentarios {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.cajaComentarios {
+    width: 90%;
+    padding: 20px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    background-color: var(--whiteComment);
+    box-shadow: var(--box-shadow-post);
+}
+
+.comentarioInd {
+    padding: 10px;
+    background-color: var(--grayPost);
+    margin: 10px 0px;
+}
+
+#user {
+    padding-bottom: 8px;
+}
+
+#user span {
+    color: gray;
+}
+
+#autoria {
+    padding: 10px;
+}
+
+.comentarioForm {
+    width: 100%;
+    display: flex;
+}
+
+/* El textarea va a ir aumentando de altura conforme se requiera, por eso no se muestra el scroll en él, considerar hacer esta funcionalidad con JS. Aumentaran el tamaño de form y del textarea*/
+
+#comentForm {
+    width: 100%;
+    display: flex;
+    height: 28px;
+}
+
+
+#comentForm textarea {
+    width: 90%;
+    height: 28px;
+    resize: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #eae9e9;;
+    font-size: 12px;
+    padding: 8px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.comentarioForm button {
+    bottom: 0;
+    right: 0;
+    width: 10%;
+    background-color: var(--peach);
+    color: white;
+    border: none;
+    padding: 6px;
+    cursor: pointer;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 12px;
+    height: 28px;
+}
+
+.comentarioForm button:hover {
+    background-color: var(--salmon);
+}
+
+.closeComment {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    margin-bottom: 10px;
+    padding-bottom: 14px;
+}
+
+#closeComment {
+    color: gray;
+    cursor: pointer;
+    font-size: 16px;
+    position: absolute;
+    right: 16px;
+}
+
+#closeComment:hover {
+    color: var(--salmon);
+}
+
+
+.contentComment.active {
+    top: 0;
+}
+
+
+/* Pie de página */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--salmon);
+    height: 40px;
+    padding: 10px;
+}
+
+.copyright {
+    color: var(--whitePost);
+    font-size: 12px;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (width <= 950px) {    
+    #individualPost {
+        width: 500px;
+    }
+    
+    .contentPost {
+        width: 420px;
+    }
+    
+    #addPost {
+        width: 500px;
+
+    }
+    
+    form {
+        width: 420px;
+    }
+}
+
+@media screen and (width <= 580px) {
+    #individualPost {
+        width: 100%;
+        padding: 20px 20px 0px 20px;
+    }
+    
+    .contentPost {
+        width: 100%;
+    }
+    
+    #addPost {
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    .fa-regular {
+        font-size: 10px;
+    }
+
+    .infoIcons {
+        font-size: 10px;
+    }
+    
+    #numLikes, #numComments {
+        font-size: 10px;
+    }
+    
+    form {
+        width: 100%;
+    }
+    
+    .copyright {
+        font-size: 10px;
+    }
+}

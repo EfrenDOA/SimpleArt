@@ -1,0 +1,292 @@
+:root {
+    --peach: #ffca9e;
+    --salmon: #efae82;
+    --white: #F5F5DC;
+    --whitePost: #f9f9f9;
+    --grayPost: #efefef;
+    --box-shadow-post: 0 0 30px #0000004e;
+}
+
+body {
+    background-color: var(--whitePost);
+}
+
+main {
+    margin: 100px 40px 10px 40px;
+}
+
+/* Sección del banner */
+.banner {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 2%;
+    padding-top: 0;
+    padding-bottom: 40px;
+}
+
+.txtBanner h1 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.txtBanner {
+    width: 40%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.imgBanner {
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.imgBanner img {
+    width: 90%;
+    animation-name: rotate;
+    animation-timing-function: linear;
+    animation-duration: 16s;
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Sección sobre nosotros */
+.about {
+    display: flex;
+    padding: 20px 2%;
+}
+
+#titleAbout {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.txtAbout {
+    padding: 10px;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.imgAbout {
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgAbout img {
+    width: 200px;
+}
+
+/* Blogs */
+.blogs {
+    padding: 20px 2%;
+    padding-top: 0;
+    font-size: 16px;
+}
+
+.blogs h1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.tendencias, .recienAgregados {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.tendencias {
+    padding-bottom: 40px;
+}
+
+.individualBlogs {
+    background-color: var(--grayPost);
+    padding: 10px;
+    cursor: pointer;
+    height: 350px;
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.individualBlogs:hover {
+    background-color: var(--peach);
+    box-shadow: var(--box-shadow-post);
+}
+
+.containerImg {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.individualBlogs img {
+    width: 100%;
+    justify-content: center;
+   /* height: 24vh;*/
+}
+
+.imgPost {
+    justify-content: center;
+   /* height: 24vh;*/
+}
+
+.contentBlog {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+
+.autoria{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+/* Pie de página */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--salmon);
+    height: 40px;
+    padding: 10px;
+}
+
+.copyright {
+    color: var(--whitePost);
+    font-size: 12px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (width <= 950px) {
+    .blogs {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .tendencias, .recienAgregados {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .individualBlogs {
+        width: 48%;
+    }
+    
+}
+
+
+
+@media screen and (width <= 780px) {
+    .txtBanner h1 {
+        font-size: 24px;
+    }
+    
+    .txtBanner {
+        font-size: 12px;
+    }
+
+    #titleAbout {
+        font-size: 18px;
+    }
+    
+    .txtAbout {
+        font-size: 12px;
+    }
+    
+    .blogs h1 {
+        font-size: 18px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}
+
+@media screen and (width <= 580px) {
+    .banner {
+        flex-direction: column-reverse;
+    }
+
+    .txtBanner {
+        width: 100%;
+    }
+
+    .txtBanner p {
+        padding-top: 10px;
+    }
+    
+    .imgBanner {
+        width: 100%;
+    }
+    
+    .imgBanner img {
+        width: 80%;
+    }
+
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .txtAbout {
+        width: 100%;
+    }
+    
+    .imgAbout {
+        width: 100%;
+    }
+
+    .imgAbout img {
+        width: 80%;
+    }
+    
+    .blogs {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
+    .tendencias, .recienAgregados {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .individualBlogs {
+        width: 100%;
+    }
+}

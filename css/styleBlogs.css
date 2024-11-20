@@ -1,0 +1,164 @@
+:root {
+    --peach: #ffca9e;
+    --salmon: #efae82;
+    --white: #F5F5DC;
+    --whitePost: #f9f9f9;
+    --grayPost: #efefef;
+    --box-shadow-post: 0 0 30px #0000004e;
+}
+
+body {
+    background-color: var(--whitePost);
+}
+
+main {
+    margin: 100px 40px 10px 40px;
+}
+
+/* Blogs */
+
+/* Blogs */
+
+
+.blogs {
+    padding: 20px 2%;
+    padding-top: 0;
+    font-size: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.blogs h1 {
+    display: flex;
+    padding-bottom: 20px;
+    font-size: 20px;
+    width: 50%;
+}
+
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+.individualBlogs {
+    background-color: var(--grayPost);
+    padding: 10px;
+    cursor: pointer;
+    height: 350px;
+    width: 25%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.individualBlogs:hover {
+    background-color: var(--peach);
+    box-shadow: var(--box-shadow-post);
+}
+
+.individualBlogs img {
+    width: 100%;
+    justify-content: center;
+}
+
+.containerImg {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgPost {
+    justify-content: center;
+   /* height: 24vh;*/
+}
+
+.contentBlog {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+}
+
+
+.autoria{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.contentBlog h4 { 
+    padding-bottom: 60px;
+}
+
+.sliderBtn {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.sliderBtn span {
+    margin: 0px 4px;
+    padding: 14px 14px;
+    width: 16px;
+    height: 16px;
+    background-color: var(--whitePost);
+    border: 2px solid #dcdcdc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sliderBtn .fa-angle-right {
+    margin-right: auto;
+}
+
+.sliderBtn .fa-angle-left {
+    margin-left: 100%;
+}
+
+.sliderBtn span:hover {
+    background-color: #dcdcdc;  
+    border: 2px solid var(--whitePost);
+    box-shadow: 0 0 10px var(--grayPost);
+}
+
+/* Pie de página */
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--salmon);
+    height: 40px;
+    padding: 10px;
+}
+
+.copyright {
+    color: var(--whitePost);
+    font-size: 12px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (width <= 780px) {
+    .blogs h1 {
+        font-size: 18px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}
+
+@media screen and (width <= 580px) {
+    /**/
+}
+
+
+

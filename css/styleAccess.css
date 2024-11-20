@@ -1,0 +1,194 @@
+:root {
+    --peach: #ffca9e;
+    --salmon: #efae82;
+    --white: #f5f5f5;
+    --black: #0000001a;
+    --box-shadow: 0 8px 24px #0000001a;
+    --gray: #666666a9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all 0.2s linear;
+}
+
+html { 
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+    overflow-x: hidden;
+    text-align: justify;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #efae822c;
+    min-height: 100vh;
+}
+
+.base {
+    background-color: var(--white);
+    width: 550px;
+    height: 600px;
+    box-shadow: 0px 0px 40px rgb(189, 189, 189);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+div .logo  {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+div .logoimg img{
+    width: 56px;
+    height: 48px;
+}
+
+div .logo span{
+    font-size: 48px;
+    color: black;
+    font-weight: bolder;
+}
+
+.access {
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.access a{
+    color: var(--peach);
+}
+
+.access a:hover{
+    color: var(--salmon);
+}
+
+.register {
+    display: inline-flex;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.register p {
+    padding-right: 6px;
+}
+
+.register a {
+    color: var(--peach);
+}
+
+.register a:hover {
+    color: var(--salmon);
+}
+
+.divForm {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="email"] {
+    margin: 10px 0px;
+}
+
+input[type="password"] {
+    margin: 15px 0px;
+}
+
+#btnAccess {
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--peach);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 400px;
+    margin-top: 20px;
+}
+
+#btnAccess:hover {
+    background-color: var(--salmon);
+}
+
+.footPage {
+    font-size: 14px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (width <= 600px) {
+    .base {
+        width: 300px;
+        height: 550px;
+    }
+
+    div .logo  {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+    }
+    
+    div .logoimg img{
+        width: 40px;
+        height: 32px;
+    }
+    
+    div .logo span{
+        font-size: 32px;
+    }
+
+    .access {
+        font-size: 12px;
+    }
+    
+    .register {
+        margin-top: 14px;
+        font-size: 12px;
+    }
+    
+    .divForm {
+        margin-bottom: 14px;
+    }
+    
+    input {
+        width: 260px;
+    }
+    
+    #btnAccess {
+        font-size: 12px;
+        width: 260px;
+    }
+    
+    .footPage {
+        font-size: 10px;
+    }
+}
